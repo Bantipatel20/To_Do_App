@@ -1,20 +1,19 @@
 import express from "express";
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 import { connectdb } from "./config/db.js";
-import todoroutes from './routes/todo.js';
-import { createServer } from 'vercel-node-server';
+import todoroutes from "./routes/todo.js";
 
 dotenv.config();
 const app = express();
 
-//connect db 
+// Connect to DB
 connectdb();
 
-//middleware 
+// Middleware
 app.use(express.json());
 
-//routes
-app.use("/api/todo",todoroutes);
+// Routes
+app.use("/api/todo", todoroutes);
 
-
-export default createServer(app);
+// Export Express app as serverless function
+export default app;
