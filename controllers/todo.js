@@ -37,7 +37,6 @@ export const deletetask = async(req,res)=>{
     try{
         
         await Todo.findByIdAndDelete(req.params.id);
-     
         res.json({message:"Delete Task"});
     }catch(err){
         res.status(500).json({message:"Error Updating Task"})
