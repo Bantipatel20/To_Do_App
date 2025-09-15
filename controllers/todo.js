@@ -14,7 +14,7 @@ export const createtask = async(req , res)=>{
 
 export const getalltask = async(req,res)=>{
     try{
-        const task = await Todo.find().sort({createAt:-1})
+        const task = await Todo.find().sort({createdAt:-1})
         res.json(task);
     }catch(err){
         res.status(500).json({message:"Error Fetching Task"})
