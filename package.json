@@ -1,11 +1,11 @@
 {
   "name": "to_do_app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Todo App Backend",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "start":"node server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,8 @@
   "dependencies": {
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
-    "mongoose": "^8.18.1"
+    "mongoose": "^8.18.1",
+    "cors": "^2.8.5",
+    "serverless-http": "^3.2.0"
   }
 }
