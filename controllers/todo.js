@@ -4,7 +4,7 @@ export const createtask = async(req , res)=>{
     try{
         const {name,title,discription,completed,date} = req.body;
 
-        const task =  await Todo.create({title,discription,completed,date});
+        const task =  await Todo.create({name,title,discription,completed,date});
 
         res.status(201).json(task);
     }catch(err){
