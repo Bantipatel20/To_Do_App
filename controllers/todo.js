@@ -2,7 +2,7 @@ import Todo from "../models/todo.js";
 
 export const createtask = async(req , res)=>{
     try{
-        const {title,discription,completed,date} = req.body;
+        const {name,title,discription,completed,date} = req.body;
 
         const task =  await Todo.create({title,discription,completed,date});
 

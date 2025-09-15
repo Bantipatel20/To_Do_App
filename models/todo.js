@@ -1,6 +1,10 @@
 import mongoose from 'mongoose';
 
 const todoschema = new mongoose.Schema({
+    name:{
+        type:String,
+        required:true
+    },
     title:{
         type:String,
         required:true,
