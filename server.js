@@ -16,6 +16,4 @@ app.use(express.json());
 app.use("/api/todo", todoroutes);
 
 // Export Express app as serverless function
-app.listen(5000,()=>{
-    console.log("started")
-})
+export default app;
